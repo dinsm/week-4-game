@@ -2,9 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HW week-4</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+
+    <header>DBZ battle</header>
+    <div id="wrapper">
+        <!--<header>TELETUBBIES/XMEN</header>-->
+
+        <article>
+            <p>You will be given a random number at the start of the game.</p>
+
+            <p>There are four guys below. By clicking on a guy you
+                will add a specific amount of points to your total score.</p>
+
+            <p>You win the game by matching your total score to random
+                number, you will lose the game if your total score goes above
+                the random number.</p>
+
+            <p>The value of each guy is hidden from you until you click
+                on it.</p>
+
+            <p>Each time when the game starts, the game will change the
+                values of each guy.</p>
+        </article>
+
+        <div id="numberComputer">0</div>
+
+        <div id="WinLo"></div>
+        <!--Wins: 0
+        Losses: 0-->
+
+        <div id="portrait">
+            <img class="dbzImage" id="booboo" src="assets/images/booboo.jpg" alt="DBZ Booboo">
+            <img class="dbzImage" id="goku" src="assets/images/goku.jpg" alt="DBZ Goku">
+            <img class="dbzImage" id="vegeta" src="assets/images/vegeta.jpg" alt="DBZ Vegeta">
+            <img class="dbzImage" id="freezer" src="assets/images/freezer.jpg" alt="DBZ Freezer">
+        </div>
+
+        <div id="totalScore"><p>Your total score is: 0</p></div>
+
+    </div>
+
+
+
+<script src="assets/javascript/game.js"></script>
 
 </body>
 </html>
