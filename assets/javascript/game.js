@@ -4,7 +4,7 @@
 
 
 
-$(document).ready(function(){
+$(document).ready(function() {
 
 //assign variables and arrays
     var randomNumber = 0;
@@ -15,7 +15,7 @@ $(document).ready(function(){
     var wins = 0;
     var losses = 0;
     var numberArr = [];
-    var userScore = 0;
+    var userScore = 0
 
 
 
@@ -27,13 +27,13 @@ $(document).ready(function(){
         console.log(booboo);
         console.log(goku);
         console.log(vegeta);
-        console.log(frezer);
-    }
+        console.log(freezer);
+}
 
     assignVariables();
 
-//add randomNumber to html #randomNumberComputer
-    $('#randomNumberComputer').text(randomNumber);
+
+    $('#numberComputer').text(randomNumber);
     console.log(randomNumber);
 
 
@@ -43,7 +43,7 @@ $(document).ready(function(){
     function newGame(){
         randomNumber = Math.floor(Math.random() * 120) + 19;
         userScore = 0;
-        $('#randomNumberComputer').text(randomNumber);
+        $('#numberComputer').text(randomNumber);
         $('#totalScore').html('Your total score is: ' + userScore);
     }
 
@@ -53,14 +53,14 @@ $(document).ready(function(){
 
 
     function createNumbers(){
-        $('#resultWinLose').html('Wins: ' + wins  + '<br>Losses: ' + losses);
+        $('#WinLo').html('Wins: ' + wins  + '<br>Losses: ' + losses);
         randomNumber = Math.floor(Math.random() * 120) + 19;
         userScore = 0;
-        $('#user-score').html('Your total score is: ' + userScore);
+        $('#totalScore').html('Your total score is: ' + userScore);
         while(numberArr.length < 4){
-            var randomnumberBand = Math.ceil(Math.random()*11) + 1;
-            if(numberArr.indexOf(randomnumberBand) > -1)continue;
-            numberArr.push(randomnumberBand);
+            var randomnumberDBZ = Math.ceil(Math.random()*11) + 1;
+            if(numberArr.indexOf(randomnumberDBZ) > -1)continue;
+            numberArr.push(randomnumberDBZ);
         }
         console.log(numberArr);
     }
@@ -77,10 +77,10 @@ $(document).ready(function(){
 
 
 
-    $( "#booboo" ).click(function() {
+    $("#booboo").click(function() {
         userScore = userScore + booboo;
         console.log(userScore);
-        $('#userScore').html('Your total score is: ' + userScore);
+        $('#totalScore').html('Your total score is: ' + userScore);
         if (userScore === randomNumber) {
             wins++;
             $('#WinLo').html('Wins: ' + wins + '<br>Losses: ' + losses);
@@ -108,13 +108,13 @@ $(document).ready(function(){
     });
 
 
-    $( "#goku" ).click(function() {
+    $("#goku").click(function() {
         userScore = userScore + goku;
-        console.log( userScore );
+        console.log(userScore);
         $('#totalScore').html('Your total score is: ' + userScore);
         if (userScore === randomNumber) {
             wins++;
-            $('#wins').text(wins);
+            $('#WinLo').text(wins);
             console.log(wins);
             alertMe();
             numberArr = [];
@@ -137,13 +137,13 @@ $(document).ready(function(){
     });
 
 
-    $( "#vegeta" ).click(function() {
+    $("#vegeta").click(function() {
         userScore = userScore + vegeta;
-        console.log( userScore );
+        console.log(userScore);
         $('#totalScore').html('Your total score is: ' + userScore);
         if (userScore === randomNumber) {
             wins++;
-            $('#wins').text(wins);
+            $('#WinLo').text(wins);
             console.log(wins);
             alertMe();
             numberArr = [];
@@ -154,7 +154,7 @@ $(document).ready(function(){
         }
         else if (userScore >= randomNumber) {
             losses++;
-            $('#losses').text(losses);
+            $('losses').text(losses);
             console.log(losses);
             alertMe();
             numberArr = [];
@@ -166,13 +166,13 @@ $(document).ready(function(){
     });
 
 
-    $( "#freezer" ).click(function() {
+    $("#freezer").click(function() {
         userScore = userScore + freezer;
-        console.log( userScore );
-        $('#userScore').html('Your total score is: ' + userScore);
+        console.log(userScore);
+        $('#totalScore').html('Your total score is: ' + userScore);
         if (userScore === randomNumber) {
             wins++;
-            $('#wins').text(wins);
+            $('#WinLo').text(wins);
             console.log(wins);
             alertMe();
             numberArr = [];
@@ -183,7 +183,7 @@ $(document).ready(function(){
         }
         else if (userScore >= randomNumber) {
             losses++;
-            $('#losses').text(losses);
+            $('losses').text(losses);
             console.log(losses);
             alertMe();
             numberArr = [];
@@ -193,9 +193,6 @@ $(document).ready(function(){
             alert("You lose!!");
         }
     });
-
-
-
 
 });
 
